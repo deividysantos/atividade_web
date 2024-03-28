@@ -10,7 +10,7 @@ export default function Livros() {
 
     useEffect(()=>{
         setCarregando(true);
-        axios.get("https://didactic-space-couscous-w5g67vwvgvphgrp6-8080.app.github.dev/livros")
+        axios.get("/api/livros")
             .then((res)=>{
                 setLivros(res.data);
             })

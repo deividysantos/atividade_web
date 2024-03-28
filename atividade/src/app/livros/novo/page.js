@@ -16,7 +16,7 @@ export default function NovaCategoria() {
     const salvar = async () => {
         const livro = {titulo_do_livro, preco_do_livro, numero_de_paginas, autor};
         try {
-            let res = await axios.post("https://didactic-space-couscous-w5g67vwvgvphgrp6-8080.app.github.dev/livros", livro);
+            let res = await axios.post("/api/livros", livro);
             router.push("/livros");
             alert("Livro cadastrado com sucesso");
         } catch(err) {
